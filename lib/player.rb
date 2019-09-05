@@ -9,9 +9,5 @@ DEFAULT_HP = 100
     @name = name
     @hp = hp
   end
-
-  def attack(player)
-    player.hp -= 10
-  end
-
+  
 end

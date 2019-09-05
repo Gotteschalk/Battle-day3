@@ -5,4 +5,5 @@ describe Player do
     bruce = Player.new("Bruce")
     expect(bruce.name).to eq("Bruce")
   end
+
 end
