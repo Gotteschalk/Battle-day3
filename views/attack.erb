@@ -1,3 +1,7 @@
-<h1> Congratulations <%= @player1_name %>, you have attacked <%= @player2_name %>! </h1>
+<h1> Congratulations <%= @current_player_name %>, you have attacked <%= @non_player_name %>! </h1>
 
-<h3> <%= @player2_name %> HP: <%= @player2_hp %> </h3>
+<h3> <%= @non_player_name %> HP: <%= @non_player_hp %> </h3>
+
+<form action='/game'>
+<button style='font-size:60px' type='submit' name='Next Turn'>Next Turn</button>
+</form>

@@ -28,15 +28,16 @@ enable :sessions
   get '/game' do
     @player_1_HP = $game.player1.hp
     @player_2_HP = $game.player2.hp
+    @current_player_name = $game.current_player.name
     erb :game
   end
 
   get '/attack' do
-    $game.attack($game.player2)
-    @player1_name = $game.player1.name
-    @player2_name = $game.player2.name
-    @player1_hp = $game.player1.hp
-    @player2_hp = $game.player2.hp
+    $game.attack($game.non_player)
+    @current_player_name = $game.current_player.name
+    @non_player_name = $game.non_player.name
+    @non_player_hp = $game.non_player.hp
+    $game.switch_turn
     erb :attack
   end
 
