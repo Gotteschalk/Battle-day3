@@ -32,8 +32,11 @@ enable :sessions
   end
 
   get '/attack' do
-    @player1 = $player1.name
-    @player2 = $player2.name
+    $player1.attack($player2)
+    @player1_name = $player1.name
+    @player2_name = $player2.name
+    @player1_hp = $player1.hp
+    @player2_hp = $player2.hp
     erb :attack
   end
 
