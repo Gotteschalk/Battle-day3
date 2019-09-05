@@ -25,7 +25,9 @@ enable :sessions
   end
 
   get '/game' do
-    'player_2_hit_points'
+    @player_1_HP = 100
+    @player_2_HP = 100
+    erb :game
   end
 
   run! if app_file == $0
