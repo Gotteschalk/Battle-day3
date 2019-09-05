@@ -30,5 +30,9 @@ enable :sessions
     erb :game
   end
 
+  get '/attack' do
+    erb :attack
+  end
+
   run! if app_file == $0
 end
